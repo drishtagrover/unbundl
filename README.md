@@ -57,6 +57,45 @@ Two sub-sections:
 ### Results
 Section with the heading "Results You'll Love" and a four-column grid of case study cards. Each card shows before and after photos side by side with labels, followed by Concern and Treatment Duration info. Cards have a light blue background (#F0F9FF) and lift on hover with a box-shadow transition.
 
+# Testimonials Component
+
+## What changed
+
+**Added**
+
+| File | Purpose |
+|---|---|
+| `public/data/testimonials.json` | Mock data — 4 testimonials with name, location, rating, quote, treatmentType |
+| `src/components/Testimonials.jsx` | New component with loading, error, and success states |
+| `src/cssFiles/Testimonials.css` | Component styles |
+
+**Modified**
+
+| File | Change |
+|---|---|
+| `src/App.jsx` | Imported and rendered Testimonials after DreamSmiles |
+| `README.md` | Added data note explaining local JSON approach |
+| `AGENTS.md` | Updated conventions — component chain, CSS variables, image imports, public/data pattern |
+
+## Data source
+
+Local JSON instead of a public API. Fake Store, DummyJSON, and JSONPlaceholder don't map to dental testimonial content.
+
+## Component states
+
+**Loading** — spinner with "Loading testimonials..." text
+
+**Error** — "Unable to load testimonials. Please try again later."
+
+**Success** — 4-column card grid, each card has star rating, quote, name, location, treatment badge
+
+## Responsive
+
+| Breakpoint | Columns |
+|---|---|
+| > 900px | 4 |
+| 900px | 2 |
+| 500px | 1 |
 ## Commands
 
 | Command | Description |
