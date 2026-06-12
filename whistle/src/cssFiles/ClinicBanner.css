@@ -1,0 +1,80 @@
+.clinic-banner {
+  padding: 16px 24px;
+  overflow: visible;
+}
+
+.clinic-banner__inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  background: #EFF6FF;
+  border: 1.5px dashed #93C5FD;
+  border-radius: 10px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  overflow: visible;
+}
+
+.clinic-banner__text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.45;
+  max-width: 560px;
+}
+
+.clinic-banner__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.clinic-banner__logo {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.clinic-banner__find {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7C3AED;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.clinic-banner__find:hover {
+  color: #5B21B6;
+}
+
+.clinic-banner__chevron {
+  font-size: 16px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.clinic-banner__chevron--up {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 640px) {
+  .clinic-banner__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .clinic-banner__right {
+    align-items: flex-start;
+  }
+}

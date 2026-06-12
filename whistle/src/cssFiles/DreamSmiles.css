@@ -1,0 +1,420 @@
+/* ══════════════════════════════════════
+   GREEN MARQUEE STRIP
+══════════════════════════════════════ */
+.marquee-strip {
+  background: linear-gradient(90deg, #CDEDCD, #CAE6E4, #C7E1F0);
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 0;
+  user-select: none;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: marquee-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-item {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.3px;
+  padding: 0 6px;
+}
+
+.marquee-sep {
+  color: rgba(55,65,81,0.3);
+  margin-left: 12px;
+}
+
+/* ══════════════════════════════════════
+   DREAM SMILES SECTION
+══════════════════════════════════════ */
+.dream {
+  padding: 72px 24px;
+  background: #F0F9FF;
+}
+
+.dream__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ── LEFT ── */
+.dream__left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.dream__left--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dream__heading {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+
+.dream__body {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+
+.dream__icons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dream__icon-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+.dream__check {
+  width: 20px;
+  height: 20px;
+  background: #DCFCE7;
+  color: var(--green);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT / CARD ── */
+.dream__right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.65s ease 0.1s, transform 0.65s ease 0.1s;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.dream__right--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.dream__card {
+  background: #F8F5FF;
+  border-radius: 20px;
+  padding: 28px;
+  border: 1.5px solid #EDE9FE;
+}
+
+.dream__card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dream__card-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+
+.dream__card-original {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dream__card-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+  margin: 4px 0;
+}
+
+.dream__card-currency {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.dream__card-number {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-dark);
+  letter-spacing: -1px;
+}
+
+.dream__card-emi {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.dream__card-emi-amount {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.dream__card-aligner-img {
+  flex-shrink: 0;
+}
+
+.dream__aligner {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.dream__card-divider {
+  height: 1px;
+  background: #E5D9FB;
+  margin-bottom: 16px;
+}
+
+/* ── BENEFIT CARDS ── */
+.dream__benefit-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  border: 1px solid #EDE9FE;
+  cursor: default;
+
+  /* scroll-in animation */
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.dream__benefit-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hover effect (Task C) */
+.dream__benefit-card:hover {
+  box-shadow: 0 6px 28px rgba(124, 58, 237, 0.14);
+  border-color: var(--purple-light);
+  transform: translateY(-3px);
+}
+
+.dream__benefit-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.dream__benefit-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.dream__benefit-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.dream__learn-btn {
+  margin-top: 4px;
+  background: transparent;
+  color: var(--purple);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0;
+  border: none;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+
+.dream__learn-btn:hover {
+  color: var(--purple-light);
+  letter-spacing: 0.3px;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .dream__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .dream__left {
+    transform: translateY(-24px);
+  }
+
+  .dream__left--visible {
+    transform: translateY(0);
+  }
+
+  .dream__right {
+    transform: translateY(24px);
+  }
+
+  .dream__right--visible {
+    transform: translateY(0);
+  }
+}
+
+
+.aligner-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 24px;
+  width: 520px;
+  max-width:  100%;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.aligner-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.aligner-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aligner-card__title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.aligner-card__pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.aligner-card__original {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.aligner-card__starting {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}
+
+.aligner-card__price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6b3fa0;
+}
+
+.aligner-card__tax {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+.aligner-card__image-wrap {
+  flex-shrink: 0;
+}
+
+.aligner-card__image {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+
+.aligner-card__divider {
+  height: 1px;
+  background: #f0f0f0;
+}
+
+.aligner-card__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.aligner-card__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.aligner-card__check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #4caf50;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aligner-card__cta {
+  align-self: flex-end;
+  font-size: 15px;
+  font-weight: 700;
+  color: #6b3fa0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.aligner-card__cta:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,50 @@
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple: #7C3AED;
+  --purple-light: #8B5CF6;
+  --purple-pale: #EDE9FE;
+  --purple-bg: #F5F3FF;
+  --green: #22C55E;
+  --green-strip: #16A34A;
+  --text-dark: #111827;
+  --text-body: #374151;
+  --text-muted: #6B7280;
+  --border: #E5E7EB;
+  --white: #ffffff;
+  --bg-light: #F9FAFB;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text-dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: var(--font);
+}
+
+input, select {
+  font-family: var(--font);
+  outline: none;
+}
