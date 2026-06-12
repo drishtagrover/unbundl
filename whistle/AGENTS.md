@@ -14,7 +14,10 @@
 | preview | `npm run preview` |
 
 ## Conventions
-- No tests configured — no test framework, no test script in package.json
-- No typecheck step (no TypeScript/tsconfig)
-- Components are pure JSX: Navbar, Hero, DreamSmiles, Results
+- No tests, no typecheck, no formatter configured
+- Components are pure JSX in `src/components/`, CSS in `src/cssFiles/`
 - Entrypoint: `index.html` → `src/main.jsx` → `App.jsx`
+- App renders `Navbar → Hero (→ ClinicBanner) → DreamSmiles → Results → Testimonials`
+- CSS custom properties (colors, font) defined in `src/index.css`
+- Images imported from `src/assets/` with relative imports
+- Static fetch data served from `public/data/` for async-loaded components

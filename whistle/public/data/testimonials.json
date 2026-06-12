@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "location": "Mumbai",
+    "rating": 5,
+    "text": "I was self-conscious about my gaps for years. Whistle changed everything — the process was smooth and my smile looks completely natural.",
+    "treatment": "Gap Closure"
+  },
+  {
+    "id": 2,
+    "name": "Rahul Verma",
+    "location": "Delhi",
+    "rating": 5,
+    "text": "The 3D scan was quick and painless. In just 6 months, my crooked teeth were perfectly aligned. Highly recommend!",
+    "treatment": "Crooked Teeth"
+  },
+  {
+    "id": 3,
+    "name": "Ananya Patel",
+    "location": "Bangalore",
+    "rating": 4,
+    "text": "Great value for money. The transparent pricing meant no surprises, and the aligners were barely noticeable.",
+    "treatment": "Open Bite"
+  },
+  {
+    "id": 4,
+    "name": "Vikram Singh",
+    "location": "Pune",
+    "rating": 5,
+    "text": "From the free scan to the final result, every step was clearly explained. My smile has never looked better!",
+    "treatment": "Protruding Teeth"
+  }
+]
